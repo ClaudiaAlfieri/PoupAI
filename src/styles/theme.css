@@ -1,12 +1,12 @@
 @layer base {
   :root,
   [data-theme='light'] {
-    --background: #f8fafc;
+   --background: #f3effe; 
     --foreground: #0f1729;
     --primary: #925cf0;
     --primary-foreground: #f8fafc;
-    --card: #fcfcfe;
-    --border: rgba(9, 9, 11, 0.08);
+   --card: #ffffff;
+   --border: rgba(9, 9, 11, 0.12);
     --muted-primary: rgba(146, 92, 240, 0.5);
     --muted-foreground: #64749a;
     --secondary-button: #f1f5f9;
