@@ -1,6 +1,8 @@
-import { Clock, Moon, Sun, TrendingUp, Wallet } from 'lucide-react'
+import { Clock, MessageCircle, Moon, Sun, TrendingUp } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
+import MiniLogoLight from '@/assets/images/mini_logo.png'
+import MiniLogoDark from '@/assets/images/mini_logo_dark.png'
 import { useTheme } from '@/hooks/useTheme'
 
 import { Button } from './Button'
@@ -11,18 +13,23 @@ export function Header() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <header className="border-b border-(--border) px-6 py-3">
+    <header className="border-b border-(--border) bg-card px-6 py-3">
       <nav className="flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="bg-primary flex h-9 w-9 items-center justify-center rounded-full">
-            <Wallet size={20} className="text-primary-foreground" />
-          </div>
-          <span className="text-lg">
-            <span className="text-muted-foreground font-medium">Poup</span>
-            <span className="font-extrabold">AI</span>
-          </span>
-        </div>
+        <button
+          onClick={() => void navigate('/')}
+          className="flex items-center gap-2"
+          aria-label="Ir para início"
+        >
+          <img
+            src={theme === 'light' ? MiniLogoLight : MiniLogoDark}
+            alt="PoupAI"
+            className="h-10 w-auto"
+          />
+          <h1 className="text-2xl font-medium leading-none text-primary">
+            Poup<strong className="font-extrabold">AI</strong>
+          </h1>
+        </button>
 
         {/* Actions Buttons */}
         <div className="flex items-center gap-1">
@@ -39,6 +46,13 @@ export function Header() {
             onClick={() => void navigate('/historico')}
           >
             <span className="hidden sm:inline">Histórico</span>
+          </Button>
+          <Button
+            variant="ghost"
+            icon={MessageCircle}
+            onClick={() => void navigate('/chat')}
+          >
+            <span className="hidden sm:inline">Tirar dúvidas</span>
           </Button>
           <Divider orientation="vertical" />
           <Button
