@@ -40,7 +40,7 @@ O projeto foi desenvolvido com base no repositório fornecido pela DIO e evoluí
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/ClaudiaAlfieri/poupai.git
+git clone https://github.com/ClaudiaAlfieri/PoupAI.git
 cd poupai
 ```
 
