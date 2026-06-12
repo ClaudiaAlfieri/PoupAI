@@ -7,7 +7,7 @@ import { PageHero } from '@/components/shared/PageHero'
 import { useTheme } from '@/hooks/useTheme'
 
 const API_KEY = String(import.meta.env.VITE_GEMINI_API_KEY)
-const MODEL_NAME = 'gemini-flash-latest'
+const MODEL_NAME = 'gemini-2.5-flash'
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${API_KEY}`
 
 const SYSTEM_PROMPT = `Você é o PoupBot, um educador financeiro jovem e descolado especializado em finanças para adolescentes brasileiros entre 12 e 18 anos.
